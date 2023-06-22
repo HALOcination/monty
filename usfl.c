@@ -11,11 +11,11 @@
 int execute(char *content, stack_t **list, unsigned int indicator, FILE *file)
 {
 	instruction_t opst[] = {
-				{"push", f_push}, {"pall", f_pall}, {"pint", f_pint},
-				{"pop", f_pop},
-				{"swap", f_swap},
-				{"add", f_add},
-				{"nop", f_nop},
+				{"push", _push}, {"pall", _pall}, {"pint", _pint},
+				{"pop", _pop},
+				{"swap", _swap},
+				{"add", _add},
+				{"nop", _nop},
 				{NULL, NULL}
 				};
 	unsigned int i = 0;
@@ -75,8 +75,8 @@ void free_stack(stack_t *list)
 {
 	stack_t *aux;
 
-	aux = head;
-	while (head)
+	aux = list;
+	while (list)
 	{
 		aux = list->next;
 		free(list);

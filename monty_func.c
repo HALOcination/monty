@@ -31,7 +31,7 @@ void _push(stack_t **list, unsigned int indicator)
 		exit(EXIT_FAILURE); }
 	n = atoi(status.arg);
 	if (status.lifi == 0)
-		addnode(head, n);
+		addnode(list, n);
 }
 
 /**
