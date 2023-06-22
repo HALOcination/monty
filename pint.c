@@ -14,6 +14,9 @@ void _pint(stack_t **list, unsigned int indicator)
 	if (*list == NULL)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", indicator);
+		fclose(status.file);
+		free(status.content);
+		free_stack(*list);
 		exit(EXIT_FAILURE);
 }
 
